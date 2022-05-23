@@ -41,6 +41,5 @@ public class SumOfNumbersUsingCallable {
         System.out.println("Correct sum from InStream is: " + total);
         executorService.shutdown();
 
-
     }
 }
