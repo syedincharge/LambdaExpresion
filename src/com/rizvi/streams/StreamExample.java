@@ -1,7 +1,8 @@
 package com.rizvi.streams;
 
-import com.modernjava.funcprogramming.Instructor;
-import com.modernjava.funcprogramming.Instructors;
+
+import com.rizvi.functionalprograming.Instructor;
+import com.rizvi.functionalprograming.Instructors;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ public class StreamExample {
         //creating a map of names and course of instructors who teaches
         //online have more than 10 years of experience
 
-        Predicate<Instructor> p1 = (i) -> i.isOnlineCourses();
+        Predicate<Instructor> p1 = (i) -> i.isOnLineCourses();
         Predicate<Instructor> p2 = (i) -> i.getYearsOfExperience()>10;
 
         List<Instructor> list = Instructors.getAll();

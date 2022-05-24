@@ -1,6 +1,8 @@
 package com.rizvi.streams;
 
-import com.modernjava.funcprogramming.Instructors;
+
+
+import com.rizvi.functionalprograming.Instructors;
 
 import java.util.Optional;
 

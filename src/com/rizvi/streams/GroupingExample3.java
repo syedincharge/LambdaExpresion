@@ -1,7 +1,7 @@
 package com.rizvi.streams;
 
-import com.modernjava.funcprogramming.Instructor;
-import com.modernjava.funcprogramming.Instructors;
+import com.rizvi.functionalprograming.Instructor;
+import com.rizvi.functionalprograming.Instructors;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -24,7 +24,7 @@ public class GroupingExample3 {
         LinkedHashMap<String, List<Instructor>> instructorByExpAndOnline = Instructors.getAll()
                 .stream().collect(Collectors.groupingBy(instructor ->
                         instructor.getYearsOfExperience()>10 ? "SENIOR": "JUNIOR",
-                        LinkedHashMap::new, Collectors.filtering(s->s.isOnlineCourses(),
+                        LinkedHashMap::new, Collectors.filtering(s->s.isOnLineCourses(),
                                 Collectors.toList())));
 
         instructorByExpAndOnline.forEach((key, value) -> {

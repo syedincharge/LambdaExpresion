@@ -1,7 +1,7 @@
 package com.rizvi.streams;
 
-import com.modernjava.funcprogramming.Instructor;
-import com.modernjava.funcprogramming.Instructors;
+import com.rizvi.functionalprograming.Instructor;
+import com.rizvi.functionalprograming.Instructors;
 
 import java.util.Comparator;
 import java.util.IntSummaryStatistics;
@@ -14,7 +14,7 @@ public class GroupingMinMaxAvgExample {
         //grouping the instructors in two sets of online course vs not online
         //and get the max years of experience of the instructors
         Map<Boolean, Optional<Instructor>> maxInstructors = Instructors.getAll()
-                .stream().collect(Collectors.groupingBy(Instructor::isOnlineCourses,
+                .stream().collect(Collectors.groupingBy(Instructor::isOnLineCourses,
                         Collectors.maxBy(Comparator.comparing
                                 (Instructor::getYearsOfExperience))));
 
@@ -24,7 +24,7 @@ public class GroupingMinMaxAvgExample {
 
         //collectingAndThen
         Map<Boolean, Instructor> maxInstructors1 = Instructors.getAll()
-                .stream().collect(Collectors.groupingBy(Instructor::isOnlineCourses,
+                .stream().collect(Collectors.groupingBy(Instructor::isOnLineCourses,
                         Collectors.collectingAndThen(
                         Collectors.maxBy(Comparator.comparing
                                 (Instructor::getYearsOfExperience)),
@@ -36,7 +36,7 @@ public class GroupingMinMaxAvgExample {
         //average years of experience of instructors who teaches online or not
 
         Map<Boolean, Double> maxInstructors2 = Instructors.getAll()
-                .stream().collect(Collectors.groupingBy(Instructor::isOnlineCourses,
+                .stream().collect(Collectors.groupingBy(Instructor::isOnLineCourses,
                                 Collectors.averagingInt(
                                         Instructor::getYearsOfExperience)
                                 ));
@@ -47,7 +47,7 @@ public class GroupingMinMaxAvgExample {
         //drive a statistical summary from properties of grouped items
 
         Map<Boolean, IntSummaryStatistics> maxInstructors3 = Instructors.getAll()
-                .stream().collect(Collectors.groupingBy(Instructor::isOnlineCourses,
+                .stream().collect(Collectors.groupingBy(Instructor::isOnLineCourses,
                         Collectors.summarizingInt(
                                 Instructor::getYearsOfExperience)
                 ));

@@ -1,7 +1,7 @@
 package com.rizvi.streams;
 
-import com.modernjava.funcprogramming.Instructor;
-import com.modernjava.funcprogramming.Instructors;
+import com.rizvi.functionalprograming.Instructor;
+import com.rizvi.functionalprograming.Instructors;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
