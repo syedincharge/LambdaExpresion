@@ -21,6 +21,7 @@ public class StreamVsCollectionExample {
         for (String name:names){
             System.out.println(name);
         }
+
         System.out.println("--------");
         for (String name:names){
             System.out.println(name);
