@@ -13,11 +13,13 @@ public class NumericStreamAggregateExample {
 
         //min
         OptionalInt min = IntStream.rangeClosed(0,1000).min();
+        //System.out.println("Minimum of 1000 numbers is: " + min);
         if (min.isPresent())
          System.out.println("Minimum of 1000 numbers is: " + min.getAsInt());
 
         //max
         OptionalInt max = IntStream.rangeClosed(0,1000).max();
+        //System.out.println("Max of 1000 numbers is: " + max);
         if (max.isPresent())
             System.out.println("Max of 1000 numbers is: " + max.getAsInt());
 

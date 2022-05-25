@@ -20,7 +20,7 @@ public class GroupingMinMaxAvgExample {
 
         maxInstructors.forEach((key, value) ->
                 System.out.println("key = " + key + " value = " + value));
-        System.out.println("---------");
+        System.out.println("###################################################################################################################################################################################");
 
         //collectingAndThen
         Map<Boolean, Instructor> maxInstructors1 = Instructors.getAll()
@@ -40,7 +40,7 @@ public class GroupingMinMaxAvgExample {
                                 Collectors.averagingInt(
                                         Instructor::getYearsOfExperience)
                                 ));
-        System.out.println("---------");
+        System.out.println("###########################################################################################################################################################################");
         maxInstructors2.forEach((key, value) ->
                 System.out.println("key = " + key + " value = " + value));
 
@@ -51,7 +51,8 @@ public class GroupingMinMaxAvgExample {
                         Collectors.summarizingInt(
                                 Instructor::getYearsOfExperience)
                 ));
-        System.out.println("---------");
+        System.out.println("######################################################################################");
+
         maxInstructors3.forEach((key, value) ->
                 System.out.println("key = " + key + " value = " + value));
 

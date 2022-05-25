@@ -15,11 +15,11 @@ public class MapToObjLongDoubleExample {
                 }).collect(Collectors.toList());
 
         randomIds.forEach(System.out::println);
-        System.out.println("------------");
+        System.out.println("############");
 
         LongStream longStream = IntStream.rangeClosed(0,5).mapToLong(i -> (long)i);
         longStream.forEach(System.out::println);
-        System.out.println("------------");
+        System.out.println("#############");
 
         DoubleStream doubleStream = LongStream.rangeClosed(0,5).mapToDouble(i -> (double)i);
         doubleStream.forEach(System.out::println);

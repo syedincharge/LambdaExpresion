@@ -13,7 +13,7 @@ public class BoxingUnBoxingExample {
         numbers = numStream.boxed().collect(Collectors.toList());
         numbers.forEach(System.out::println);
 
-        Optional<Integer> sum = numbers.stream().reduce((a,b)-> a + b);
+        Optional<Integer> sum = numbers.stream().reduce((a,b) -> a + b);
         if (sum.isPresent())
         System.out.println (sum.get());
 
