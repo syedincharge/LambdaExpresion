@@ -18,6 +18,7 @@ public class StreamsOperations {
                 .count();
 
         System.out.println(count);
+        System.out.println("########################################################");
         //distinct
         List<String> courses = Instructors.getAll().stream()
                 .map(Instructor::getCourses)
@@ -27,13 +28,16 @@ public class StreamsOperations {
                 .collect(Collectors.toList());
         System.out.println(courses);
 
+        System.out.println("########################################################");
+
         //anymatch, allmatch and nonmatch
 
 
         boolean match = Instructors.getAll().stream()
                 .map(Instructor::getCourses)
                 .flatMap(List::stream)
-                .noneMatch(s -> s.startsWith("J"));
+              //  .anyMatch(s -> s.startsWith("J"));
+               .noneMatch(s -> s.startsWith("J"));
 
         System.out.println(match);
 

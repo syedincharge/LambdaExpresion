@@ -9,7 +9,8 @@ public class StreamMapFilterReduceExample {
         int result = Instructors.getAll().stream()
                 .filter(Instructor::isOnLineCourses)
                 .map(Instructor::getYearsOfExperience)
-                .reduce(0,Integer::sum);
+                .reduce(0, Integer::sum);
+
 
         System.out.println(result);
 

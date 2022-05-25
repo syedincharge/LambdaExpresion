@@ -6,7 +6,8 @@ import com.rizvi.functionalprograming.Instructors;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class MapExample {
+public class
+MapExample {
     public static void main(String[] args) {
         //return only instructor names from the instructor list
         Set<String> instructorNames = Instructors.getAll().stream()

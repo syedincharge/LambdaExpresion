@@ -21,12 +21,13 @@ public class StreamExample {
         list.stream().filter(p1).filter(p2);
 
         Map<String, List<String>> map = list.stream()
+
                                 .filter(p1)
                                 .filter(p2)
-                               // .peek(s-> System.out.println(s))
+                                .peek(s-> System.out.println(s))
                                 .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
 
-        System.out.println(map);
+   //    System.out.println(map);
 
     }
 }

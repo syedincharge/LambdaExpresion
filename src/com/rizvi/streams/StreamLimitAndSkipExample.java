@@ -10,7 +10,7 @@ public class StreamLimitAndSkipExample {
         List limit5numbers = numbers.stream().limit(5).collect(Collectors.toList());
         limit5numbers.forEach(System.out::println);
 
-        System.out.println("-----");
+        System.out.println("######");
         List skip5numbers = numbers.stream().skip(5).collect(Collectors.toList());
         skip5numbers.forEach(System.out::println);
 

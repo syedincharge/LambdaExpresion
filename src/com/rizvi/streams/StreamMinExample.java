@@ -26,6 +26,5 @@ public class StreamMinExample {
         if(result3.isPresent())
             System.out.println(result3.get());
 
-
     }
 }
