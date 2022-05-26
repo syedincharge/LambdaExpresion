@@ -14,13 +14,13 @@ public class PartitioningByExample {
         //partition instructors in two groups of instructor
         //first is years of experience is > 10 and other is <=10
         Predicate<Instructor> experiencePredicate = instructor ->
-                instructor.getYearsOfExperience()>10;
+                instructor.getYearsOfExperience() > 10;
         Map<Boolean, List<Instructor>> partitionMap = Instructors.getAll()
                 .stream().collect(Collectors.partitioningBy(experiencePredicate));
         partitionMap.forEach((key,value)-> {
             System.out.println("key = " + key + " value = " + value);
         });
-        System.out.println("-------------------------------");
+        System.out.println("######################################################          ######################################################      ######################################################         ######################################################       ######################################################       ######################################################      ######################################################      ######################################################    ##########################");
 
         //partition but return is set instead of list
 
